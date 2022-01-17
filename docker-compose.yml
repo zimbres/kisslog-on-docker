@@ -7,7 +7,7 @@ networks:
 
 services:
   backend:
-    image: zimbres/kisslog.backend:3.0
+    image: zimbres/kisslog.backend:latest
     container_name: kisslog.backend.dev
     restart: unless-stopped
     volumes:
@@ -19,7 +19,7 @@ services:
       - "mongodb"
 
   frontend:
-    image: zimbres/kisslog.frontend:3.0
+    image: zimbres/kisslog.frontend:latest
     container_name: kisslog.frontend.dev
     restart: unless-stopped
     volumes:

@@ -1,9 +1,11 @@
+docker builder prune
+
 docker buildx create --name mybuilder
 
 docker buildx use mybuilder
 
 docker buildx inspect --bootstrap
 
-docker buildx build --platform linux/amd64,linux/arm64 -t zimbres/kisslog.backend --push .
+docker buildx build --no-cache --platform linux/amd64,linux/arm64 -t zimbres/kisslog.backend:3.1 --push .
 
-docker buildx build --platform linux/amd64,linux/arm64 -t zimbres/kisslog.frontend --push .
+docker buildx build --no-cache --platform linux/amd64,linux/arm64 -t zimbres/kisslog.frontend:3.1 --push .
