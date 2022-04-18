@@ -1,12 +1,13 @@
 {
   "ApplicationName": "KissLog",
-  "AppVersion": "20211227.1",
+  "AppVersion": "20220411.1",
   "InternalLogs.DirectoryPath": "Logs",
   "InternalLogs.MinimumStatusCode": "400",
   "KissLogBackend.BasicAuth.Password": "_This_Password_Should_Be_Replaced_",
   "KissLog.License": "",
   "KissLogBackendUrl": "http://kisslog.backend.dev",
   "KissLogFrontendUrl": "http://kisslog.frontend.dev",
+  "EnableHeadersForwarding": true,
   "MediaDirectoryPath": "",
   "Database": {
     "Provider": "MySql",
@@ -20,6 +21,9 @@
     "SessionCookie": {
       "IsPersistentFixedValue": null,
       "ExpireInMinutes": 10080
+    },
+    "ExternalIdentityProviders": {
+      "AzureActiveDirectory": ""
     }
   },
   "Smtp": {
